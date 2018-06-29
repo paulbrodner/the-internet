@@ -6,15 +6,10 @@ require 'sinatra/cookies'
 require 'zurb-foundation'
 require 'compass'
 require 'faker'
-#require 'logger'
 
 helpers Sinatra::Cookies
 set :cookie_options, :domain => nil
 enable :sessions, :logging
-
-configure :production do
-  require 'newrelic_rpm'
-end
 
 get '/' do
   erb :index
@@ -67,6 +62,10 @@ get '/download_secure/:filename' do |filename|
   send_file "public/uploads/#{filename}",
     :filename => filename,
     :type => mime_type
+end
+
+get '/horizontal_slider' do
+  erb :horizontal_slider
 end
 
 def get_mime_type_for(filename)
@@ -461,4 +460,8 @@ get '/floating_menu' do
   @copy = []
   10.times { @copy << Faker::Lorem.sentence(300) }
   erb :floating_menu
+end
+
+get '/exit_intent' do
+  erb :exit_intent
 end

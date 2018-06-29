@@ -1,3 +1,32 @@
+#0.50.1
++ Updates to README.template and README.md
+
+#0.50.0
++ Pulled in PR for Horizontal Slider (thanks [pittgoose](https://github.com/pittgoose)!)
+
+#0.49.5
++ Removed missed dependency that was causing a production outage
+
+#0.49.4
++ Removed unused Gems from Gemfile
++ Specify Ruby version number in Gemfile
+
+#0.49.3
++ Added MIT license to project
++ Cleaned up unused configurations for NewRelic and TravisCI
+
+#0.49.1
++ Added /exit_intent example which triggers a modal dialog when the mouse leaves the viewport window
+
+#0.48.4
++ Fixed broken sorting functionality on /tables
+
+#0.48.3
++ Added footer to all pages with "Power by" info
+
+#0.48.2
++ Added a Rake task to cleanup uploads directory
+
 #0.48.1
 + Fixed a typo on /infinite_scroll
 + Adjusted the duration for the floating menu to follow the user scroll from 400 ms to 1 ms
